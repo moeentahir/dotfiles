@@ -1,0 +1,17 @@
+- name: Ensure ~/.gitconfig copied from config/gitconfig
+  hosts: localhost
+  tasks:
+  - copy: src="../config/gitconfig" dest="~/.gitconfig"
+
+- name: Ensure homebrew packages are installed.
+  hosts: localhost
+  tasks:
+  - homebrew:
+      name: bat
+      state: latest
+  - homebrew:
+      name: jq
+      state: latest
+  - homebrew:
+      name: tree
+      state: latest

@@ -1,7 +1,14 @@
-- name: Ensure ~/.gitconfig copied from config/gitconfig
+- name: Create directories and copy files
   hosts: localhost
   tasks:
-  - copy: src="../config/gitconfig" dest="~/.gitconfig"
+  - name: Create directory
+    file:
+      path: ~/.config/vim
+      state: directory
+      recurse: yes
+  - copy:
+      src: "../config/gitconfig"
+      dest: "~/.config/gitconfig"
 
 - name: Ensure homebrew packages are installed.
   hosts: localhost
@@ -18,3 +25,10 @@
   - homebrew:
       name: tmux
       state: latest
+- name: Create symbolic link 
+  hosts: localhost
+  tasks:
+  - file:
+      src: "~/.config/gitconfig"
+      dest: "~/.gitconfig"
+      state: link

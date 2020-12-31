@@ -1,16 +1,4 @@
-- name: Create directories and copy files
-  hosts: localhost
-  tasks:
-  - name: Create directory
-    file:
-      path: ~/.config/vim
-      state: directory
-      recurse: yes
-  - copy:
-      src: "../git"
-      dest: "~/.dotfiles/"
-
-- name: Ensure homebrew packages are installed.
+- name: Install packages
   hosts: localhost
   tasks:
     - name: Install packages
@@ -21,10 +9,27 @@
           - tree
           - tmux
         state: latest
+
+- name: Copy files
+  hosts: localhost
+  tasks:
+  - name: Copy files
+    copy:
+      src: "../{{ item }}"
+      dest: "~/.dotfiles/"
+    with_items:
+      - git
+      - vim 
+      - shell
+
 - name: Create symbolic link 
   hosts: localhost
   tasks:
-  - file:
-      src: "~/.dotfiles/git/gitconfig"
-      dest: "~/.gitconfig"
+  - name: Create symbolic link 
+    file:
+      src: "{{ item.src }}"
+      dest: "{{ item.dest }}"
       state: link
+    with_items:
+      - { dest: "~/.gitconfig", src: "~/.dotfiles/git/gitconfig" }
+      - { dest: "~/.vimrc", src: "~/.dotfiles/vim/vimrc" }

@@ -1,2 +1,6 @@
 set number
 set relativenumber
+
+alias pbcopy="xclip -selection c" 
+alias pbpaste="xclip -selection clipboard -o" 
+

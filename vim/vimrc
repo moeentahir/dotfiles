@@ -1,0 +1,6 @@
+set number
+set relativenumber
+set expandtab " replace tab character with spaces
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2

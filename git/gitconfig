@@ -1,3 +1,5 @@
 [user]
 	name = Moeen Tahir
 	email = mtahir@thoguthworks.com
+[core]
+	editor = vim

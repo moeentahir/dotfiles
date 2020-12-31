@@ -7,28 +7,24 @@
       state: directory
       recurse: yes
   - copy:
-      src: "../config/gitconfig"
-      dest: "~/.config/gitconfig"
+      src: "../git"
+      dest: "~/.dotfiles/"
 
 - name: Ensure homebrew packages are installed.
   hosts: localhost
   tasks:
-  - homebrew:
-      name: bat
-      state: latest
-  - homebrew:
-      name: jq
-      state: latest
-  - homebrew:
-      name: tree
-      state: latest
-  - homebrew:
-      name: tmux
-      state: latest
+    - name: Install packages
+      homebrew:
+        name: 
+          - bat
+          - jq
+          - tree
+          - tmux
+        state: latest
 - name: Create symbolic link 
   hosts: localhost
   tasks:
   - file:
-      src: "~/.config/gitconfig"
+      src: "~/.dotfiles/git/gitconfig"
       dest: "~/.gitconfig"
       state: link

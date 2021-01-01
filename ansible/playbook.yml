@@ -1,14 +1,6 @@
 - name: Setup dev machine
   hosts: localhost
   tasks:
-  - name: Install packages
-    homebrew:
-      name:
-        - bat
-        - jq
-        - tree
-        - tmux
-      state: latest
 
   - name: Copy dotfiiles directories
     copy:
@@ -16,8 +8,11 @@
       dest: "~/.dotfiles/"
     with_items:
       - git
-      - vi
+      - vim
       - shell
+      - dev
+      - dev/tw
+      - dev/work
 
   - name: Clone repos
     git:
@@ -30,8 +25,10 @@
     copy:
       src: "{{ item.src }}"
       dest: "{{ item.dest }}"
+      force: "{{ item.force | default('yes') }}"
     with_items:
       - { dest: "~/.vim/colors/", src: "~/.dotfiles/vim/vim-colors-solarized/colors/solarized.vim" }
+      - { dest: "~/", src: "~/.dotfiles/dev", force: 'no' }
 
   - name: Create symbolic link 
     file:
@@ -41,3 +38,12 @@
     with_items:
       - { dest: "~/.gitconfig", src: "~/.dotfiles/git/gitconfig" }
       - { dest: "~/.vimrc", src: "~/.dotfiles/vim/vimrc" }
+
+  - name: Install packages
+    homebrew:
+      name:
+        - bat
+        - jq
+        - tree
+        - tmux
+      state: latest

@@ -1,6 +1,7 @@
 syntax enable
 
 set autoindent
+set spell spelllang=en_gb
 set background=dark
 set expandtab " replace tab character with spaces
 set ignorecase

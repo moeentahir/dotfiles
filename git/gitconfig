@@ -4,9 +4,9 @@
 	editor = vim
 [includeIf "gitdir/i:~/dev/"]
   path = ~/dev/.gitconfig
-[includeIf "gitdir/i:~/dev/tw"]
+[includeIf "gitdir/i:~/dev/tw/"]
   path = ~/dev/tw/.gitconfig
-[includeIf "gitdir/i:~/dev/work"]
+[includeIf "gitdir/i:~/dev/work/"]
   path = ~/dev/work/.gitconfig
-[includeIf "gitdir/i:~/dev/personal"]
+[includeIf "gitdir/i:~/dev/personal/"]
   path = ~/dev/personal/.gitconfig

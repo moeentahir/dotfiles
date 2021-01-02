@@ -2,6 +2,21 @@
 	name = Moeen Tahir
 [core]
 	editor = vim
+[alias]
+    # list all aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+    s = status --short
+    ss = status
+    c = commit
+    ca = commit --amend 
+    cane = commit --amend --no-edit
+    p = push
+    pf = push -f
+    l = log --oneline
+    ll = log --all --oneline --graph
+    lll = log --all --graph
+    deleted = "!git log --diff-filter=D --summary | grep delete"
+    forget = "!git fetch -p origin && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
 [includeIf "gitdir/i:~/dev/"]
   path = ~/dev/.gitconfig
 [includeIf "gitdir/i:~/dev/tw/"]

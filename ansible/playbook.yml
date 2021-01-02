@@ -37,6 +37,7 @@
       state: link
     with_items:
       - { dest: "~/.gitconfig", src: "~/.dotfiles/git/gitconfig" }
+      - { dest: "~/.gitignore", src: "~/.dotfiles/git/gitignore" }
       - { dest: "~/.vimrc", src: "~/.dotfiles/vim/vimrc" }
 
   - name: Install packages

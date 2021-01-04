@@ -27,7 +27,11 @@ call plug#begin('~/.vim/bundle')
   Plug 'pearofducks/ansible-vim'
   Plug 'yuttie/comfortable-motion.vim'
   Plug 'ctrlpvim/ctrlp.vim'
-
+  Plug 'itchyny/lightline.vim'
+  Plug 'tpope/vim-fugitive'
+  Plug 'preservim/nerdtree'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -36,3 +40,13 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra' " use current git repo/file director with ctrl p 
 
 map <C-n> :NERDTreeToggle<CR> " Toggle nerdtree 
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }

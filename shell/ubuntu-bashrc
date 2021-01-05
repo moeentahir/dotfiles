@@ -115,7 +115,14 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-# ******************************* custom code *****************************************
-echo "Loaded bashrc"
-source "~/.dotfiles/shell/commonrc"
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+if [ -f ~/.dotfiles/shell/bashrc ]; then
+  . ~/.dotfiles/shell/bashrc
+fi
 
+# *************************** custom changes ***********************
+alias pbcopy="xclip -selection c" 
+alias pbpaste="xclip -selection clipboard -o" 
+
+source "~/.dotfiles/shell/bashrc"
+echo "Loaded ubuntu-bash-rc"

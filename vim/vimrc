@@ -2,6 +2,8 @@ syntax enable
 
 set autoindent
 set spell spelllang=en_gb
+set spellsuggest=fast,20
+set spellfile=~/.dotfiles/vim/spell/en.utf-8.add
 set background=dark
 set expandtab " replace tab character with spaces
 set ignorecase

@@ -53,3 +53,4 @@ let g:lightline = {
       \ },
       \ }
 let @a = "^mfwmlA ( `fyiwApA.`lyiw$pbbbgu$A@work.mail.com )ICo-authoured by: j"
+source ~/dev/.vimrc.local

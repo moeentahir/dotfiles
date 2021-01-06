@@ -52,3 +52,4 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
+let @a = "^mfwmlA ( `fyiwApA.`lyiw$pbbbgu$A@work.mail.com )ICo-authoured by: j"

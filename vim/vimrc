@@ -52,7 +52,6 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
-let @a = "^mfwmlA ( `fyiwApA.`lyiw$pbbbgu$A@work.mail.com )ICo-authoured by: j"
 
 if empty(glob('~/.vimrc.local'))
   source ~/.vimrc.local

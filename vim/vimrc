@@ -34,7 +34,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'preservim/nerdtree'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-
+  Plug 'tpope/vim-commentary'
 call plug#end()
 
 let g:ctrlp_map = '<c-p>'
@@ -53,4 +53,4 @@ let g:lightline = {
       \ },
       \ }
 let @a = "^mfwmlA ( `fyiwApA.`lyiw$pbbbgu$A@work.mail.com )ICo-authoured by: j"
-source ~/dev/.vimrc.local
+source ~/.vimrc.local

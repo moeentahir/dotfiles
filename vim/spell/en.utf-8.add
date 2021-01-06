@@ -12,3 +12,4 @@ config
 localhost
 dest
 src
+plugin

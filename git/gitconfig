@@ -1,5 +1,6 @@
 [user]
 	name = Moeen Tahir
+	email = moeentahir@hotmail.com
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore

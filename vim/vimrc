@@ -53,4 +53,7 @@ let g:lightline = {
       \ },
       \ }
 let @a = "^mfwmlA ( `fyiwApA.`lyiw$pbbbgu$A@work.mail.com )ICo-authoured by: j"
-[ -f ~/.vimrc.local ] && source ~/.vimrc.local
+
+if empty(glob('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif

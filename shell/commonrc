@@ -2,3 +2,4 @@
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 echo "Inside common"
+alias copy-to-dotfiles="git ls-files -m | xargs -I{} cp {} ~/dev/dotfiles/{}"

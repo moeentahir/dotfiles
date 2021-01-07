@@ -53,6 +53,6 @@ let g:lightline = {
       \ },
       \ }
 
-if empty(glob('~/.vimrc.local'))
+if !empty(glob('~/.vimrc.local'))
   source ~/.vimrc.local
 endif

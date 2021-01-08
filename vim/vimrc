@@ -1,22 +1,25 @@
 syntax enable
+colorscheme default
 
 set autoindent
-set spell spelllang=en_gb
-set spellsuggest=fast,20
-set spellfile=~/.dotfiles/vim/spell/en.utf-8.add
 set background=dark
+set complete+=kspell " Autocomplete dictionary words when spell check is on
+set encoding=utf-8
 set expandtab " replace tab character with spaces
+set hlsearch
 set ignorecase
+set ignorecase
+set laststatus=2
 set number
 set relativenumber
 set ruler
 set shiftwidth=2
+set showcmd
 set softtabstop=2
+set spell spelllang=en_gb
+set spellfile=~/.dotfiles/vim/spell/en.utf-8.add
+set spellsuggest=fast,20
 set tabstop=2
-set hlsearch
-set ignorecase
-set laststatus=2
-colorscheme default
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -35,7 +38,13 @@ call plug#begin('~/.vim/bundle')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-commentary'
+  Plug 'vim-scripts/AutoComplPop'
+  Plug 'machakann/vim-highlightedyank' " Briefly highlight the text yanked
+  Plug 'jvirtanen/vim-hcl' " Syntax for hashi corp language frameworks
+  Plug 'vim-python/python-syntax'
+  Plug 'stephpy/vim-yaml'
 call plug#end()
+
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -52,6 +61,19 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
+
+" ******************** Start: Key remapping ***********************
+
+" Leader mapping
+let mapleader = " "
+
+nnoremap ]r :ALENextWrap<CR> " Nex linting error
+nnoremap [r :ALEPreviousWrap<CR>
+nnoremap <leader>o :Files <CR>
+noremap <F5> :setlocal spell!<CR> " Toggle spell check.
+noremap <F6> :set invrelativenumber<CR> " Toggle relative line numbers and regular line numbers.
+
+" ******************** End: Key remapping ***********************
 
 if !empty(glob('~/.vimrc.local'))
   source ~/.vimrc.local

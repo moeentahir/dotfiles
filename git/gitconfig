@@ -8,6 +8,8 @@
 [alias]
     # list all aliases
     la = "!git config -l | grep alias | cut -c 7-"
+    a = add -p
+    aa = add .
     s = status --short
     ss = status
     c = commit
@@ -15,6 +17,7 @@
     cane = commit --amend --no-edit
     p = push
     pf = push -f
+    pr = pull -r
     l = log --oneline
     ll = log --all --oneline --graph
     lll = log --all --graph

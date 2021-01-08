@@ -1,2 +1,3 @@
 echo "Inside common"
 alias copy-to-dotfiles="git ls-files -m | xargs -I{} cp {} ~/dev/dotfiles/{}"
+alias g="git"

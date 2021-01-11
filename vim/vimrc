@@ -43,6 +43,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'jvirtanen/vim-hcl' " Syntax for hashi corp language frameworks
   Plug 'vim-python/python-syntax'
   Plug 'stephpy/vim-yaml'
+  Plug 'tarekbecker/vim-yaml-formatter'
 call plug#end()
 
 

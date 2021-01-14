@@ -44,6 +44,8 @@ call plug#begin('~/.vim/bundle')
   Plug 'vim-python/python-syntax'
   Plug 'stephpy/vim-yaml'
   Plug 'tarekbecker/vim-yaml-formatter'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
@@ -79,3 +81,10 @@ noremap <F6> :set invrelativenumber<CR> " Toggle relative line numbers and regul
 if !empty(glob('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
+
+" ******************* Start: Tabline *************************
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+" ******************* End: Tabline ****************************

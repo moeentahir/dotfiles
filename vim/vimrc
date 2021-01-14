@@ -28,24 +28,26 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/bundle')
-  Plug 'junegunn/vim-plug' " Get help for vim-plug itself
-  Plug 'pearofducks/ansible-vim'
-  Plug 'yuttie/comfortable-motion.vim'
+
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'itchyny/lightline.vim'
-  Plug 'tpope/vim-fugitive'
-  Plug 'preservim/nerdtree'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
-  Plug 'tpope/vim-commentary'
-  Plug 'vim-scripts/AutoComplPop'
-  Plug 'machakann/vim-highlightedyank' " Briefly highlight the text yanked
+  Plug 'junegunn/vim-plug' " Get help for vim-plug itself
   Plug 'jvirtanen/vim-hcl' " Syntax for hashi corp language frameworks
-  Plug 'vim-python/python-syntax'
+  Plug 'machakann/vim-highlightedyank' " Briefly highlight the text yanked
+  Plug 'pearofducks/ansible-vim'
+  Plug 'preservim/nerdtree'
   Plug 'stephpy/vim-yaml'
   Plug 'tarekbecker/vim-yaml-formatter'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-fugitive'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'vim-python/python-syntax'
+  Plug 'vim-scripts/AutoComplPop'
+  Plug 'yuttie/comfortable-motion.vim'
+
 call plug#end()
 
 

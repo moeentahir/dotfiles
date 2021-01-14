@@ -20,6 +20,7 @@ set spell spelllang=en_gb
 set spellfile=~/.dotfiles/vim/spell/en.utf-8.add
 set spellsuggest=fast,20
 set tabstop=2
+set incsearch
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -46,6 +47,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-python/python-syntax'
   Plug 'vim-scripts/AutoComplPop'
+  Plug 'vim-scripts/ReplaceWithRegister'
   Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()

@@ -11,6 +11,7 @@ set ignorecase
 set ignorecase
 set laststatus=2
 set number
+set path=.,**
 set relativenumber
 set ruler
 set shiftwidth=2
@@ -31,8 +32,8 @@ endif
 
 call plug#begin('~/.vim/bundle')
 
-  Plug 'ctrlpvim/ctrlp.vim'
   " Plug 'itchyny/lightline.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/vim-plug' " Get help for vim-plug itself
@@ -44,6 +45,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'tarekbecker/vim-yaml-formatter'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-surround'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-python/python-syntax'

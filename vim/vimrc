@@ -19,7 +19,7 @@ set shiftwidth=2
 set showcmd
 set smarttab
 set softtabstop=2
-set spell spelllang=en_gb
+set spelllang=en_gb
 set spellfile=~/.dotfiles/vim/spell/en.utf-8.add
 set spellsuggest=fast,20
 set tabstop=2
@@ -84,6 +84,10 @@ nnoremap [r :ALEPreviousWrap<CR>
 nnoremap <leader>o :Files <CR>
 noremap <F5> :setlocal spell!<CR> " Toggle spell check.
 noremap <F6> :set invrelativenumber<CR> " Toggle relative line numbers and regular line numbers.
+inoremap jj <Esc>
+vnoremap jj <Esc>
+" nnoremap <leader>- :vsplit<CR>
+" nnoremap <leader>| :split<CR>
 
 " ******************** End: Key remapping ***********************
 
@@ -98,3 +102,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 " ******************* End: Tabline ****************************
+
+"  ****************** Start: File types ************************
+autocmd FileType java set tabstop=8 softtabstop=4 shiftwidth=4
+autocmd FileType groovy set tabstop=8 softtabstop=4 shiftwidth=4
+
+"  ****************** End: filetypes ************************
+

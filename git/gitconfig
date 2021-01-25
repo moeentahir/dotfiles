@@ -48,4 +48,4 @@
 	new = green bold
 	whitespace = red reverse
 [interactive]
-	diffFilter = diff-so-fancy
+	diffFilter = (cat && diff-so-fancy)

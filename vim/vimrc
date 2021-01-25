@@ -4,6 +4,7 @@ colorscheme default
 set autoindent
 set background=dark
 set complete+=kspell          " Autocomplete dictionary words when spell check is on
+set clipboard=unnamed
 set encoding=utf-8
 set expandtab                 " replace tab character with spaces
 set hlsearch
@@ -86,7 +87,7 @@ noremap <F5> :setlocal spell!<CR> " Toggle spell check.
 noremap <F6> :set invrelativenumber<CR> " Toggle relative line numbers and regular line numbers.
 inoremap jj <Esc>
 vnoremap jj <Esc>
-" nnoremap <leader>- :vsplit<CR>
+nnoremap <leader>- :vsplit<CR>
 " nnoremap <leader>| :split<CR>
 
 " ******************** End: Key remapping ***********************

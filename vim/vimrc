@@ -3,8 +3,8 @@ colorscheme default
 
 set autoindent
 set background=dark
-set complete+=kspell          " Autocomplete dictionary words when spell check is on
 set clipboard=unnamed
+set complete+=kspell          " Autocomplete dictionary words when spell check is on
 set encoding=utf-8
 set expandtab                 " replace tab character with spaces
 set hlsearch
@@ -12,6 +12,7 @@ set ignorecase
 set ignorecase
 set incsearch
 set laststatus=2
+set list listchars=tab:»\ ,trail:·
 set number
 set path=.,**
 set relativenumber
@@ -20,8 +21,8 @@ set shiftwidth=2
 set showcmd
 set smarttab
 set softtabstop=2
-set spelllang=en_gb
 set spellfile=~/.dotfiles/vim/spell/en.utf-8.add
+set spelllang=en_gb
 set spellsuggest=fast,20
 set tabstop=2
 set visualbell t_vb=          " Turn off bell

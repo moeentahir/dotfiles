@@ -1,5 +1,4 @@
 syntax enable
-colorscheme default
 
 set autoindent
 set background=dark
@@ -57,25 +56,27 @@ call plug#begin('~/.vim/bundle')
   Plug 'vim-scripts/AutoComplPop'
   Plug 'vim-scripts/ReplaceWithRegister'
   Plug 'yuttie/comfortable-motion.vim'
+  Plug 'morhetz/gruvbox'
 
 call plug#end()
 
+colorscheme gruvbox
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra' " use current git repo/file director with ctrl p 
 
 map <C-n> :NERDTreeToggle<CR> " Toggle nerdtree 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'wombat',
+"       \ 'active': {
+"       \   'left': [ [ 'mode', 'paste' ],
+"       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+"       \ },
+"       \ 'component_function': {
+"       \   'gitbranch': 'FugitiveHead'
+"       \ },
+"       \ }
 
 " ******************** Start: Key remapping ***********************
 

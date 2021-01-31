@@ -1,4 +1,4 @@
-echo "Inside common"
+echo "loading commonrc..."
 alias copy-to-git="git ls-files -m | xargs -I{} cp {} ~/dev/dotfiles/{}"
 alias copy-from-git="git ls-files -m | xargs -I{} cp {} ~/.dotfiles/{}"
 alias g="git"

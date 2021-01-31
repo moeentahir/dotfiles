@@ -57,10 +57,13 @@ call plug#begin('~/.vim/bundle')
   Plug 'vim-scripts/ReplaceWithRegister'
   Plug 'yuttie/comfortable-motion.vim'
   Plug 'morhetz/gruvbox'
+  Plug 'sjl/badwolf'
 
 call plug#end()
 
-colorscheme gruvbox
+" let g:gruvbox_contrast_dark='hard'
+" colorscheme gruvbox
+colorscheme default
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -100,11 +103,11 @@ if !empty(glob('~/.vimrc.local'))
 endif
 
 " ******************* Start: Tabline *************************
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
+let g:airline_theme='luna'
+" let g:airline_solarized_bg='dark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
+" let g:airline#extensions#tabline#formatter = 'default'
 " ******************* End: Tabline ****************************
 
 "  ****************** Start: File types ************************

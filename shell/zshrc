@@ -1,0 +1,7 @@
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="random"
+plugins=( themes )
+ZSH_DISABLE_COMPFIX="true"
+source $ZSH/oh-my-zsh.sh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.dotfiles/shell/commonrc ] && source ~/.dotfiles/shell/commonrc

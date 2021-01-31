@@ -1,4 +1,6 @@
 echo "loading zshrc..."
+[ -f ~/.dotfiles/shell/commonrc ] && source ~/.dotfiles/shell/commonrc
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
@@ -19,7 +21,7 @@ gitlog() {
 }
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="mm/dd/yyyy"
-plugins=( compleat aws fzf themes vi-mode zsh_reload zsh-autosuggestions)
+plugins=( compleat aws fzf themes vi-mode zsh_reload )
 source ~/.zplug/init.zsh
 zplug "bhilburn/powerlevel9k", as:theme
 zplug "djui/alias-tips"
@@ -34,6 +36,4 @@ if ! zplug check --verbose; then
 fi
 zplug load
 source $ZSH/oh-my-zsh.sh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.dotfiles/shell/commonrc ] && source ~/.dotfiles/shell/commonrc
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local

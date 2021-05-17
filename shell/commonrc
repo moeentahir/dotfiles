@@ -3,7 +3,8 @@ alias copy-to-git="git ls-files -m | xargs -I{} cp {} ~/dev/dotfiles/{}"
 alias copy-from-git="git ls-files -m | xargs -I{} cp {} ~/.dotfiles/{}"
 alias g="git"
 alias cat="bat"
-export PATH=$HOME/.dotfiles/packages/diff-so-fancy/:$PATH
+export PATH=$PATH:$HOME/.dotfiles/packages/diff-so-fancy/
+export PATH=$PATH:$HOME/Library/Python/3.8/bin
 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)

@@ -23,6 +23,7 @@
     lll = log --all --graph
     deleted = "!git log --diff-filter=D --summary | grep delete"
     forget = "!git fetch -p origin && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D"
+    jfdi = "!git add . && git cane && git pf"
 [includeIf "gitdir/i:~/dev/"]
   path = ~/dev/.gitconfig
 [includeIf "gitdir/i:~/dev/tw/"]

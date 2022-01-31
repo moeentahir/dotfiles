@@ -9,6 +9,7 @@ export PATH=$PATH:$HOME/Library/Python/3.8/bin
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
 export JAVA_13_HOME=$(/usr/libexec/java_home -v13)
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 alias java8='export JAVA_HOME=$JAVA_8_HOME'
 alias java11='export JAVA_HOME=$JAVA_11_HOME'

@@ -5,6 +5,9 @@ alias g="git"
 alias cat="bat"
 export PATH=$PATH:$HOME/.dotfiles/packages/diff-so-fancy/
 export PATH=$PATH:$HOME/Library/Python/3.8/bin
+export PATH=$PATH:$HOME/Library/Python/3.9/bin
+export PATH=$PATH:$HOME/Library/Python/3.10/bin
+export PATH=$PATH:$HOME/Library/Python/3.11/bin
 export PATH=$PATH:"/Applications/IntelliJ IDEA CE.app/Contents/MacOS"
 
 export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)

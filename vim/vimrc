@@ -95,6 +95,9 @@ inoremap jk <Esc>
 vnoremap jk <Esc>
 nnoremap <leader>- :vsplit<CR>
 nnoremap <leader>\ :split<CR>
+nmap <leader>n :bnext<cr>
+map <leader>p :bprevious<cr>
+map <leader>d :bdelete<cr>
 
 " ******************** End: Key remapping ***********************
 
